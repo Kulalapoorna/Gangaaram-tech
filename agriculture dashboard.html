@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Dash Board</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Expandable Section */
+        .hidden-section {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            background: #FAF9F6;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            display: block;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Layout for gallery and text */
+        .gallery-text-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Image Gallery - Left Side */
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 50%;
+        }
+
+        /* Ensuring shadow applies properly */
+        .main-image-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* Added shadow here */
+        }
+
+        /* Main Image with shadow */
+        #mainImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px; /* Ensuring rounded corners */
+        }
+
+
+        /* Navigation Buttons */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .arrow:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .left { left: 5px; }
+        .right { right: 5px; }
+
+        /* Thumbnail Images */
+        .thumbnail-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .thumbnail {
+            width: 70px;
+            height: 50px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 5px;
+        }
+
+        .thumbnail:hover, .thumbnail.active {
+            opacity: 1;
+            border: 2px solid #007BFF;
+        }
+
+       /* Text Section - Right Side */
+        .text-section {
+            width: 50%;
+            text-align: left;
+            font-size: 1.2rem; /* Increase font size */
+            line-height: 1.5;  /* Improve readability */
+        }
+
+        /* Shadow effect for heading */
+        h2 {
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        #mainImage {
+            transition: opacity 0.5s ease-in-out;
+        }
+        /* Go Back Button Styles */
+        .back-btn {
+            display: block;
+            width: 120px;
+            margin: 40px auto 0;
+            padding: 10px 15px;
+            background-color: #002e5f;
+            color: white;
+            text-align: center;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 46, 95, 0.2);
+        }
+
+        .back-btn:hover {
+            background-color: #00bfff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+        }
+
+        .back-btn i {
+            margin-right: 5px;
+        }
+        /*hr stying*/
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #00bfff, transparent);
+            margin: 30px auto;
+            width: 60%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    
+    <!-- Expandable Section -->
+    <div id="section" class="hidden-section">
+        
+        <h2>Agriculture Dash Board</h2>
+        <hr>
+        <div class="gallery-text-container">
+            <!-- Image Gallery (Left) -->
+            <div class="image-gallery">
+                <!-- Main Image Display -->
+                <div class="main-image-container">
+                    <button id="prevBtn" class="arrow left">&#10094;</button>
+                    <img id="mainImage" src="./images/agriculture2.jpg" alt="Main Display Image">
+                    <button id="nextBtn" class="arrow right">&#10095;</button>
+                </div>
+
+                <!-- Thumbnail Images -->
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="./images/agriculture2.jpg" alt="Thumbnail 1" onclick="changeImage(0)">
+                    <img class="thumbnail" src="./images/agriculture4.jpg" alt="Thumbnail 2" onclick="changeImage(1)">
+                    <img class="thumbnail" src="./images/agriculture3.jpg" alt="Thumbnail 3" onclick="changeImage(2)">
+                    <img class="thumbnail" src="./images/agriculture1.jpg" alt="Thumbnail 4" onclick="changeImage(3)">
+                </div>
+            </div>
+
+            <!-- Text Section (Right) -->
+            <div class="text-section">
+                <h3>About Gangaaram Function Hall</h3>
+                <p>
+                    ✨ The Agriculture Dashboard is designed to analyze agricultural procurement data across different districts, commodities, 
+                    seasons, and key agricultural metrics. The dataset is sourced from data.gov.in, which provides government-released agricultural 
+                    data. This dashboard helps in visualizing procurement trends, comparing commodity production, and identifying high-performing 
+                    districts and seasons.
+               </p>
+                <p>
+                    🔹 Use Cases:
+                    Helps policymakers track procurement trends and make data-driven decisions.
+                    
+                    Assists farmers in understanding demand trends for different commodities.
+                    
+                    Provides insights into seasonal variations in agricultural procurement.
+                </p>
+               
+            </div>
+        </div>
+        <a href="index.html#portfolio" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+    </div>
+
+    <script>
+ 
+
+        // Image Gallery Logic
+        const images = ["./images/agriculture2.jpg", "./images/agriculture4.jpg" , "./images/agriculture3.jpg", "./images/agriculture1.jpg"];
+        let currentIndex = 0;
+        let autoScrollInterval;
+
+        function updateMainImage(index) {
+            const mainImage = document.getElementById("mainImage");
+            mainImage.style.opacity = "0"; // Fade out effect
+            setTimeout(() => {
+                mainImage.src = images[index];
+                mainImage.style.opacity = "1"; // Fade in effect
+            }, 200);
+            
+            // Highlight active thumbnail
+            document.querySelectorAll(".thumbnail").forEach((thumb, i) => {
+                thumb.classList.toggle("active", i === index);
+            });
+
+            // Restart auto-scroll when manually changed
+            restartAutoScroll();
+        }
+
+        function autoScrollImages() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateMainImage(currentIndex);
+        }
+
+        function restartAutoScroll() {
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = setInterval(autoScrollImages, 5000);
+        }
+
+        // Start auto-scroll
+        autoScrollInterval = setInterval(autoScrollImages, 5000);
+
+        // Click on arrows to navigate images manually
+        document.getElementById("prevBtn").addEventListener("click", () => {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            updateMainImage(currentIndex);
+        });
+
+        document.getElementById("nextBtn").addEventListener("click", () => {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            updateMainImage(currentIndex);
+        });
+
+        // Click on thumbnails to update main image manually
+        function changeImage(index) {
+            currentIndex = index;
+            updateMainImage(index);
+        }
+
+        function updateMainImage(index) {
+    const mainImage = document.getElementById("mainImage");
+    mainImage.style.opacity = "0"; // Fade out effect
+
+    setTimeout(() => {
+        mainImage.src = images[index];
+        mainImage.style.opacity = "1"; // Fade in effect
+    }, 400);
+
+    // Remove active class from all thumbnails
+    document.querySelectorAll(".thumbnail").forEach((thumb, i) => {
+        if (i === index) {
+            thumb.classList.add("active");
+            thumb.style.border = "2px solid #007BFF"; // Ensure border moves correctly
+        } else {
+            thumb.classList.remove("active");
+            thumb.style.border = "none"; // Reset border for other thumbnails
+        }
+    });
+
+    // Restart auto-scroll when manually changed
+    restartAutoScroll();
+}
+    </script>
+</body>
+</html>

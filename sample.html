@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Gangaaram Function Hall</title>
+    <link rel="stylesheet" href="./css/highlights.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"></a>
+        <!-- <div class="fas fa-bars"></div> -->
+        <nav class="navbar" style="top: 0;">
+            <ul>
+                <li><a href="./index.html#home">Home</a></li>
+                <li><a href="./index.html#service">Services</a></li>
+                <!-- <li><a href="#team">team</a></li> -->
+                <li><a href="./sample.html">Highlights</a></li>
+                <li><a href="./careers.html">Career</a></li>
+                <li><a href="./index.html#about">About</a></li>
+                <li><a href="./index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="mainbody-section">
+    <button id="prevCard" class="arrow left">&#10094;</button>
+    <!-- Expandable Section -->
+    <div id="section" class="hidden-section firstcard">
+
+        
+        <h2>Recruitment</h2>
+        <hr>
+        <div class="gallery-text-container">
+            <!-- Image Gallery (Left) -->
+            <div class="image-gallery">
+                <!-- Main Image Display -->
+                <div class="main-image-container">
+                    <button id="prevBtn" class="arrow left">&#10094;</button>
+                    <img id="mainImage" src="./images/info/IMG-20250403-WA0030.jpg" alt="Main Display Image">
+                    <button id="nextBtn" class="arrow right">&#10095;</button>
+                </div>
+
+                <!-- Thumbnail Images -->
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="./images/info/IMG-20250403-WA0030.jpg" alt="Thumbnail 1" onclick="changeImage(0)">
+                    <img class="thumbnail" src="./images/info/IMG-20250403-WA0034.jpg" alt="Thumbnail 2" onclick="changeImage(1)">
+                    <img class="thumbnail" src="./images/info/IMG-20250403-WA0036.jpg" alt="Thumbnail 4" onclick="changeImage(3)">
+                    <img class="thumbnail" src="./images/info/IMG-20250403-WA0037.jpg" alt="Thumbnail 5" onclick="changeImage(4)">
+                    <img class="thumbnail" src="./images/info/IMG-20250403-WA0038.jpg" alt="Thumbnail 6" onclick="changeImage(5)">
+                    <img class="thumbnail" src="./images/info/WhatsApp Image 2025-04-03 at 10.00.56_9afe156e.jpg" alt="Thumbnail 6" onclick="changeImage(5)">
+                </div>
+            </div>
+
+            <!-- Text Section (Right) -->
+            <div class="text-section">
+                <h3>Recruitment</h3>
+                <p>
+                  🔹 Empowering Tech Talent on Campus
+                  Our company has actively engaged with top institutions to spark innovation and bridge the industry-academia gap. Through tech talks, hands-on workshops, and career mentorship sessions, we’ve helped students gain real-world insights and skills.
+                  <br>
+                  ⚡ Driving Innovation Through Collaboration
+                  By partnering with engineering colleges and coding clubs, we co-created problem-solving experiences—from hackathons to mini-project expos—that challenged students to think critically and build impactful solutions.
+                  <br>
+                  📍 Colleges Where We’ve Made a Difference
+                  From VIT Vellore to SRM University and PES Bengaluru, our presence has energized campuses with learning, leadership, and opportunity—shaping tomorrow’s tech leaders right at the grassroots.
+                  <br>
+                </p>
+            </div>
+        </div>
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+    </div>
+    <!-- Expandable Section 2 -->
+    <div id="section" class="hidden-section secondcard" style="display: none;">
+
+        
+        <h2>Coding Contest</h2>
+        <hr>
+        <div class="gallery-text-container">
+            <!-- Image Gallery (Left) -->
+            <div class="image-gallery">
+                <!-- Main Image Display -->
+                <div class="main-image-container">
+                    <button id="prevBtn" class="arrow left">&#10094;</button>
+                    <img id="mainImage" src="./images/info/IMG-20250403-WA0014.jpg" alt="Main Display Image">
+                    <button id="nextBtn" class="arrow right">&#10095;</button>
+                </div>
+
+                <!-- Thumbnail Images -->
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="./images/info/IMG-20250403-WA0014.jpg" alt="Thumbnail 1" onclick="changeImage(0)">
+                    <img class="thumbnail" src="./images/info/IMG-20250403-WA0016.jpg" alt="Thumbnail 2" onclick="changeImage(1)">
+                    <img class="thumbnail" src="./images/info/IMG-20250403-WA0019.jpg" alt="Thumbnail 3" onclick="changeImage(2)">
+                    <img class="thumbnail" src="./images/info/IMG-20250403-WA0022.jpg" alt="Thumbnail 4" onclick="changeImage(3)">
+                    <img class="thumbnail" src="./images/info/IMG-20250403-WA0025.jpg" alt="Thumbnail 5" onclick="changeImage(4)">
+                </div>
+            </div>
+
+            <!-- Text Section (Right) -->
+            <div class="text-section">
+                <h3>Coding Contest</h3>
+                <p>
+                    🔹 Interactive Platform & Live Leaderboard
+                    The contest was powered by a custom-built platform featuring a sleek UI and a real-time leaderboard. 
+                    Participants could instantly track their progress, while the audience stayed engaged with live updates and 
+                    dynamic scoring.<br>
+
+                    ⚡ Secure, Scalable & Fair
+                    From backend scalability to smart anti-cheating mechanisms, the entire system was engineered for reliability 
+                    and fairness. Every submission was automatically validated against test cases to ensure accuracy and integrity.
+                    <br>
+                    📍 Where We Made It Happen
+                    Our company successfully hosted this coding contest at Mohan Babu University, 
+                    in collaboration with student communities and tech clubs—turning the campus into a hub of innovation 
+                    and competitive energy.<br>
+                </p>
+            </div>
+        </div>
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+    </div>
+    <button id="nextCard" class="arrow right">&#10095;</button>
+</div>
+<script>
+    // Recruitment Section Logic
+    const recruitmentImages = [
+      "./images/info/IMG-20250403-WA0030.jpg",
+      "./images/info/IMG-20250403-WA0034.jpg",
+      "./images/info/IMG-20250403-WA0036.jpg",
+      "./images/info/IMG-20250403-WA0037.jpg",
+      "./images/info/IMG-20250403-WA0038.jpg",
+      "./images/info/WhatsApp Image 2025-04-03 at 10.00.56_9afe156e.jpg"
+    ];
+    let recruitmentIndex = 0;
+    let recruitmentInterval;
+    
+    function updateRecruitmentImage(index) {
+      const mainImage = document.querySelector(".firstcard #mainImage");
+      const thumbnails = document.querySelectorAll(".firstcard .thumbnail");
+      mainImage.style.opacity = "0";
+      setTimeout(() => {
+        mainImage.src = recruitmentImages[index];
+        mainImage.style.opacity = "1";
+      }, 300);
+      thumbnails.forEach((thumb, i) => {
+        thumb.classList.toggle("active", i === index);
+      });
+      restartRecruitmentScroll();
+    }
+    
+    function autoScrollRecruitment() {
+      recruitmentIndex = (recruitmentIndex + 1) % recruitmentImages.length;
+      updateRecruitmentImage(recruitmentIndex);
+    }
+    function restartRecruitmentScroll() {
+      clearInterval(recruitmentInterval);
+      recruitmentInterval = setInterval(autoScrollRecruitment, 5000);
+    }
+    recruitmentInterval = setInterval(autoScrollRecruitment, 5000);
+    document.querySelector(".firstcard #prevBtn").onclick = () => {
+      recruitmentIndex = (recruitmentIndex === 0) ? recruitmentImages.length - 1 : recruitmentIndex - 1;
+      updateRecruitmentImage(recruitmentIndex);
+    };
+    document.querySelector(".firstcard #nextBtn").onclick = () => {
+      recruitmentIndex = (recruitmentIndex + 1) % recruitmentImages.length;
+      updateRecruitmentImage(recruitmentIndex);
+    };
+    document.querySelectorAll(".firstcard .thumbnail").forEach((thumb, i) => {
+      thumb.onclick = () => {
+        recruitmentIndex = i;
+        updateRecruitmentImage(i);
+      };
+    });
+    
+    // Coding Context Section Logic
+    const codingImages = [
+      "./images/info/IMG-20250403-WA0014.jpg",
+      "./images/info/IMG-20250403-WA0016.jpg",
+      "./images/info/IMG-20250403-WA0019.jpg",
+      "./images/info/IMG-20250403-WA0022.jpg",
+      "./images/info/IMG-20250403-WA0025.jpg"
+    ];
+    let codingIndex = 0;
+    let codingInterval;
+    
+    function updateCodingImage(index) {
+      const mainImage = document.querySelector(".secondcard #mainImage");
+      const thumbnails = document.querySelectorAll(".secondcard .thumbnail");
+      mainImage.style.opacity = "0";
+      setTimeout(() => {
+        mainImage.src = codingImages[index];
+        mainImage.style.opacity = "1";
+      }, 300);
+      thumbnails.forEach((thumb, i) => {
+        thumb.classList.toggle("active", i === index);
+      });
+      restartCodingScroll();
+    }
+    
+    function autoScrollCoding() {
+      codingIndex = (codingIndex + 1) % codingImages.length;
+      updateCodingImage(codingIndex);
+    }
+    function restartCodingScroll() {
+      clearInterval(codingInterval);
+      codingInterval = setInterval(autoScrollCoding, 5000);
+    }
+    codingInterval = setInterval(autoScrollCoding, 5000);
+    document.querySelector(".secondcard #prevBtn").onclick = () => {
+      codingIndex = (codingIndex === 0) ? codingImages.length - 1 : codingIndex - 1;
+      updateCodingImage(codingIndex);
+    };
+    document.querySelector(".secondcard #nextBtn").onclick = () => {
+      codingIndex = (codingIndex + 1) % codingImages.length;
+      updateCodingImage(codingIndex);
+    };
+    document.querySelectorAll(".secondcard .thumbnail").forEach((thumb, i) => {
+      thumb.onclick = () => {
+        codingIndex = i;
+        updateCodingImage(i);
+      };
+    });
+    
+    // Section Switch
+    document.getElementById("prevCard").addEventListener("click", () => {
+      const s1 = document.querySelector(".firstcard");
+      const s2 = document.querySelector(".secondcard");
+      if (window.getComputedStyle(s1).display !== "none") {
+        s1.style.display = "none";
+        s2.style.display = "block";
+      } else {
+        s2.style.display = "none";
+        s1.style.display = "block";
+      }
+    });
+    document.getElementById("nextCard").addEventListener("click", () => {
+      const s1 = document.querySelector(".firstcard");
+      const s2 = document.querySelector(".secondcard");
+      if (window.getComputedStyle(s1).display !== "none") {
+        s1.style.display = "none";
+        s2.style.display = "block";
+      } else {
+        s2.style.display = "none";
+        s1.style.display = "block";
+      }
+    });
+    </script>
+    
+
+
+</body>
+</html>
